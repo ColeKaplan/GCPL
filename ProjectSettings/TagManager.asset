@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Beneath Floor
+    uniqueID: 1741003993
+    locked: 0
+  - name: Floor
+    uniqueID: 3473123271
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
