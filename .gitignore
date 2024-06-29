@@ -47,6 +47,12 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# Cole's things
+*.DS_Store
+Packages/packages-lock.json
+ProjectSettings/ProjectVersion.txt
+
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
