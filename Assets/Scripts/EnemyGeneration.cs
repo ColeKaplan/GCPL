@@ -25,8 +25,8 @@ public class EnemyGeneration : MonoBehaviour
             position = new Vector3(Mathf.Cos(theta) * RADIUS, Mathf.Sin(theta) * RADIUS, 1);
 
             GameObject newEnemy = Instantiate(enemy, position, Quaternion.identity);
-            EnemyMovement enemyScript = newEnemy.GetComponent<EnemyMovement>();
-            enemyScript.character = this.character;
+            //EnemyMovement enemyScript = newEnemy.GetComponent<EnemyMovement>();
+            //nemyScript.character = this.character;
 
             deltaTime = 0.0f;
         } else {
