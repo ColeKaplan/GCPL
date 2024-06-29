@@ -8,6 +8,9 @@ public class EnemyGeneration : MonoBehaviour
     public GameObject character;
     private Vector3 position;
     private float deltaTime;
+    private readonly float TIME_SPREAD = 30.0f;
+    private readonly float RADIUS = 10.0f;
+    private readonly float PI = 3.141f;
 
     void Start()
     {
@@ -17,8 +20,10 @@ public class EnemyGeneration : MonoBehaviour
 
     void Update()
     {
-        if (deltaTime >= 5.0f) {
-            position = new Vector3(0, 0, 1);
+        if (deltaTime >= TIME_SPREAD) {
+            float theta = Random.Range(0f, 2 * PI);
+            position = new Vector3(Mathf.Cos(theta) * RADIUS, Mathf.Sin(theta) * RADIUS, 1);
+
             GameObject newEnemy = Instantiate(enemy, position, Quaternion.identity);
             EnemyMovement enemyScript = newEnemy.GetComponent<EnemyMovement>();
             enemyScript.character = this.character;

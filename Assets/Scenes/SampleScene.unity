@@ -122,6 +122,93 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12949417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12949419}
+  - component: {fileID: 12949418}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &12949418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12949417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACYn+shK8u3VQIAABAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1T2zAQ/SsZnUvHOLRAb60JoYdAhtDh4svGWseayJJHHySByX/vSrZjk05PUd57u/t2tfIHE8o2WDht5kbwhebIfkxYOLMvk4F8wD1stFqJd+w1r4K7Koggap7BCU34ZQizukZnRPFTbWQQJwR6JUpt6hnfYKatswSXIC0SZbQL0Yqgjwnb08/FbQg50Cm9Dqd3Ot0mkyMdC1QOzSDthb2sVXlVSKgb5MHyIJ726mkrU9RMpwjGCy2lsJ0T5g5N7DSDxnrqgwRcAHUWywd9hWJTueByHPxUlhZdZ8nA4U4YGlCblf3S7dRqsNvW1xtIjyfjbcrFP+zFZaRLo+uHvuplEiq4ShTbZzgUYN1oqGP47rNtr3Ygt7CW+FqhetRzo73iRDrjQ6i3mN4Nf0+NZRUW2wFvrZ6Bvvn/1YQejrH3fSZFvQ7U16sWWEkdpx0vHg3dy28yHNfCdikIDS7+WHyBzXh/OuJeGOuI6rpUwd5aexOkbBZnFrrxLtNGYYQ70w0qkO6wpDTu/ALPuFHZM+Yewkvpindc/wDOQiI86JPkjFrq3emybKV3C7TVk3dSKBxMB+KR5pRppdr9Gs+kD1t5U0IxCtt4wT+vFrud8psC+FWSAiaYphfX5c03TKYppEnCv0+Bxd0TivoEuWyNduOhW1NDckV71n9AJnMDTdx1bmA3F++1Ho1cqFKvCoOontoMJ+NoqAi9ST7jgga0QueEivfNPnImdbFFnp8S5bHT2d4ZyIcsOWvEm3YByVkWvxg5C/Bpl5cG3wTuQvE+2ZEd/wJQSwMEFAAACAgAAJif6yr+jdNtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKlcYpFcmKKiYFRYqpBqpGRrnmahWmqgbFRopGBQYqZcaJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif6yEry7dVAgAAEAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6yr+jdNtAAAAeAAAAAkAJAAAAAAAAAAAAAAAogIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABaAwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &12949419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12949417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &252155489
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,3 +416,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 4572440009489387249}
   - {fileID: 252155491}
+  - {fileID: 12949419}
