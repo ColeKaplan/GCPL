@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    public GameObject character;
+    private Rigidbody2D rigidBody;
+    private Vector2 movement;
+    private float movementSpeed;
+    
+
     void Start()
     {
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        movement = new Vector2(50.0f, 50.0f);
+        movementSpeed = 3.0f;
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float characterX = character.transform.position.x;
+        float characterY = character.transform.position.y;
+        movement = new Vector2(characterX - rigidBody.transform.position.x, characterY - rigidBody.transform.position.y).normalized;
+    
+    }
+
+    void FixedUpdate()
+    {
+        rigidBody.MovePosition(rigidBody.position + movement * movementSpeed * Time.fixedDeltaTime);
     }
 }
