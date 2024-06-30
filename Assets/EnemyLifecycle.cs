@@ -6,13 +6,12 @@ using Pathfinding;
 public class EnemyLifecycle : MonoBehaviour
 {
     public GameObject coin;
-    private float speed;
+    public float speed;
     private float deltaTime;
     private AIPath pathScript;
     public EnemyGeneration eg;
     void Start()
     {
-        speed = 1;
         deltaTime = 0;
         pathScript = gameObject.GetComponent<AIPath>();
     }
@@ -21,7 +20,7 @@ public class EnemyLifecycle : MonoBehaviour
     void Update()
     {
         deltaTime += Time.fixedDeltaTime;
-        if (deltaTime >= 500f) {
+        if (deltaTime >= 600f) {
             speed -= 0.001f;
             pathScript.maxSpeed = speed;
         }

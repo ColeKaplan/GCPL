@@ -17,7 +17,7 @@ public class CoinBehavior : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(character.transform.position, gameObject.transform.position);
-        if (distance <= 1f) {
+        if (distance <= 1.5f) {
             CharacterMovement.score += 1;
             Destroy(gameObject);
         }
