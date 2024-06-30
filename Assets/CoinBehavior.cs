@@ -6,11 +6,12 @@ public class CoinBehavior : MonoBehaviour
 {
     
     public GameObject character;
+    private float deltaTime;
 
     void Start()
     {
         
-
+        deltaTime = 0;
     }
 
     
@@ -19,6 +20,10 @@ public class CoinBehavior : MonoBehaviour
         float distance = Vector3.Distance(character.transform.position, gameObject.transform.position);
         if (distance <= 1.5f) {
             CharacterMovement.score += 1;
+            Destroy(gameObject);
+        }
+        deltaTime += Time.fixedDeltaTime;
+        if (deltaTime >= 100) {
             Destroy(gameObject);
         }
     }

@@ -56,8 +56,7 @@ public class EnemyGeneration : MonoBehaviour
         }
         wave += 1;
         enemyPerWave += 1;
-        if (wave % 3 == 0) {
-            enemySpeed += 0.25f;
-        }
+        enemySpeed += 0.25f;
+        
     }
 }

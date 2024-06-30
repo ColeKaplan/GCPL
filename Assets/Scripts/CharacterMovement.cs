@@ -36,10 +36,15 @@ public class CharacterMovement : MonoBehaviour
             float moveHorizontal = Input.GetAxisRaw("Horizontal");
             float moveVertical = Input.GetAxisRaw("Vertical");
             movement = new Vector2(moveHorizontal, moveVertical).normalized;
-
-            
         }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            SceneManager.LoadScene(2);
+        }
+
     }
+
 
     void FixedUpdate()
     {
