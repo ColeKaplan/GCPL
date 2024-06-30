@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
         {
             if (!response.success)
             {
-                Debug.Log("error starting LootLocker session");
+                Debug.Log("error starting LootLocker session" + response.errorData.message);
 
                 return;
             }
