@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using TMPro;
 
 public class WallDrawer : MonoBehaviour
 {
     public Tilemap tilemap;
     public Tile[] walls; // Ordering of this matters a lot. Up = 1, Down = 2, Left = 4, Right = 8. Add them up and use that position in the array
     public int wallRemovals = 10;
+    public TextMeshProUGUI wallText;
     
 
 
@@ -33,6 +35,7 @@ public class WallDrawer : MonoBehaviour
             if(tilemap.GetTile(tilemapPosition) != null) {
                 tilemap.SetTile(tilemapPosition, null);
                 wallRemovals--;
+                wallText.text = "x " + wallRemovals;
                 updateNeighbors(tilemapPosition);
             }
         }
