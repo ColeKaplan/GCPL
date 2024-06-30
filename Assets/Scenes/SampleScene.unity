@@ -255,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2353876471137669052, guid: 58bef619afafc47e081d5eaa59e548cf, type: 3}
   character: {fileID: 1628486865}
+  numEnemies: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7335,6 +7336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 2741224077059926770, guid: 271510e942d5b4bf7950222b0516c099, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7342,6 +7347,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 851090367671329110, guid: 271510e942d5b4bf7950222b0516c099, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4572440009489387254}
+    - targetCorrespondingSourceObject: {fileID: 851090367671329110, guid: 271510e942d5b4bf7950222b0516c099, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4572440009489387259}
   m_SourcePrefab: {fileID: 100100000, guid: 271510e942d5b4bf7950222b0516c099, type: 3}
 --- !u!114 &4572440009489387254
 MonoBehaviour:
@@ -7355,6 +7363,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391c6c1ef06af48febbf8625ababbd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &4572440009489387259
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628486865}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.125, y: 1.6875}
+  m_Direction: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
