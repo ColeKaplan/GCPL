@@ -7,7 +7,7 @@ public class WallDrawer : MonoBehaviour
 {
     public Tilemap tilemap;
     public Tile[] walls; // Ordering of this matters a lot. Up = 1, Down = 2, Left = 4, Right = 8. Add them up and use that position in the array
-    
+    public int wallRemovals = 10;
     
 
 
@@ -26,6 +26,15 @@ public class WallDrawer : MonoBehaviour
             int wallNum = calculateWallSurroundings(tilemapPosition);
             tilemap.SetTile(tilemapPosition, walls[wallNum]);
             updateNeighbors(tilemapPosition);
+        }
+        if(Input.GetMouseButton(1) && wallRemovals > 0) {
+            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int tilemapPosition = tilemap.WorldToCell(position);
+            if(tilemap.GetTile(tilemapPosition) != null) {
+                tilemap.SetTile(tilemapPosition, null);
+                wallRemovals--;
+                updateNeighbors(tilemapPosition);
+            }
         }
     }
 
