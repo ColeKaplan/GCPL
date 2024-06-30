@@ -10,19 +10,18 @@ public class LeaderboardManager : MonoBehaviour
     string leaderboardID = "23199";
     public TextMeshProUGUI names;
     public TextMeshProUGUI scores;
-    public TextMeshProUGUI score;
     public TextMeshProUGUI name;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        score.text = "" + CharacterMovement.score;
+
     }
 
     [System.Obsolete]
     public IEnumerator SubmitScoreRoutine(int scoreToUpload)
     {
-        score.text = scoreToUpload.ToString();
         bool done = false;
         string playerID = PlayerPrefs.GetString("PlayerID");
         LootLockerSDKManager.SubmitScore(playerID, scoreToUpload, leaderboardID, (response) =>
