@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class CharacterMovement : MonoBehaviour
     public Sprite leftSprite;
     public Sprite rightSprite;
     public static int score;
+    public TextMeshProUGUI coinText;
 
 
     void Start()
@@ -23,12 +25,12 @@ public class CharacterMovement : MonoBehaviour
         movementSpeed = 7;
         movement = new Vector2(0.0f, 0.0f).normalized;
         score = 0;
+        coinText.text = "x " + score;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
-
-    
     void Update()
     {
+        coinText.text = "x " + score;
         if (rigidBody) {
            
             float moveHorizontal = Input.GetAxisRaw("Horizontal");
