@@ -8,10 +8,10 @@ using Cinemachine;
 public class CinemachineLimits : CinemachineExtension
 {
     [Tooltip("Lock the camera's Y position to this value")]
-    private float minY = -4.7f;
-    private float maxY = 4.7f;
-    private float minX = -5;
-    private float maxX = 5;
+    private float minY = -14f;
+    private float maxY = 14f;
+    private float minX = -10f;
+    private float maxX = 10f;
  
     protected override void PostPipelineStageCallback(
         CinemachineVirtualCameraBase vcam,

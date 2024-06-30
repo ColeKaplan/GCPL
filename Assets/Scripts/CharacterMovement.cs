@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
     
     private Rigidbody2D rigidBody;
     private float movementSpeed;
-    
     private Vector2 movement;
-
     private SpriteRenderer spriteRenderer;
     public Sprite upSprite;
     public Sprite downSprite;
@@ -55,5 +54,14 @@ public class CharacterMovement : MonoBehaviour
         }
 
         rigidBody.MovePosition(rigidBody.position + movement * movementSpeed * Time.fixedDeltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.collider is CircleCollider2D)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
