@@ -24,10 +24,12 @@ public class EnemyLifecycle : MonoBehaviour
         if (deltaTime >= 500f) {
             speed -= 0.001f;
             pathScript.maxSpeed = speed;
-        } 
+        }
 
         if (speed <= 0.1f) {
-            Instantiate(coin, transform.position, Quaternion.identity);
+            GameObject newCoin = Instantiate(coin, transform.position, Quaternion.identity);
+            CoinBehavior coinScript = newCoin.GetComponent<CoinBehavior>();
+            coinScript.character = eg.character;
             eg.numEnemies -= 1;
             Destroy(gameObject);
         }

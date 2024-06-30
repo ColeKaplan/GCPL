@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour
     public Sprite downSprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
+    public static int score;
 
 
     void Start()
@@ -21,7 +22,7 @@ public class CharacterMovement : MonoBehaviour
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         movementSpeed = 7;
         movement = new Vector2(0.0f, 0.0f).normalized;
-
+        score = 0;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
