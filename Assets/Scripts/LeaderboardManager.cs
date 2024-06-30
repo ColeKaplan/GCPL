@@ -16,6 +16,7 @@ public class LeaderboardManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score.text = "" + CharacterMovement.score;
     }
 
     [System.Obsolete]
@@ -81,7 +82,6 @@ public class LeaderboardManager : MonoBehaviour
         yield return new WaitWhile(() => done == false);
     }
 
-    // Update is called once per frame
     public IEnumerator ChangeName(string name)
     {
         bool done = false;
