@@ -61,7 +61,23 @@ public class CharacterMovement : MonoBehaviour
             spriteRenderer.sprite = downSprite;
         }
 
-        rigidBody.MovePosition(rigidBody.position + movement * movementSpeed * Time.fixedDeltaTime);
+        Vector2 newPosition = rigidBody.position + movement * movementSpeed * Time.fixedDeltaTime;
+
+        if(newPosition.y > 19){
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, 19);
+        }
+        if(newPosition.y < -19){
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, -19);
+        }
+        if(newPosition.x > 19.1f){
+            gameObject.transform.position = new Vector2(19.1f, gameObject.transform.position.y);
+        }
+        if(newPosition.x < -20.1f){
+            gameObject.transform.position = new Vector2(-20.1f, gameObject.transform.position.y);
+        }
+
+        rigidBody.MovePosition(newPosition);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
