@@ -20,7 +20,7 @@ public class EnemyLifecycle : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         deltaTime += Time.fixedDeltaTime;
         totalTime += Time.fixedDeltaTime;

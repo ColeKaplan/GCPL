@@ -15,7 +15,7 @@ public class CoinBehavior : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         float distance = Vector3.Distance(character.transform.position, gameObject.transform.position);
         if (distance <= 1.5f) {

@@ -28,7 +28,7 @@ public class EnemyGeneration : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (deltaTime >= TIME_SPREAD) {
             GenerateEnemyWave();
