@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Use your mouse to build walls. Right click to break walls (20 per round)
+  m_text: '- Use your mouse to build walls. Right click to break walls (4 per game)
 
 
     -
