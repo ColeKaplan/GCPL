@@ -25,8 +25,8 @@ public class EnemyLifecycle : MonoBehaviour
         deltaTime += Time.fixedDeltaTime;
         totalTime += Time.fixedDeltaTime;
 
-        if (deltaTime >= 500f) {
-            speed -= 0.005f;
+        if (deltaTime >= 10f) {
+            speed -= 0.01f;
             pathScript.maxSpeed = speed;
             deltaTime = 0;
         }

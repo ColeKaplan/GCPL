@@ -48,7 +48,6 @@ public class EnemyGeneration : MonoBehaviour
             enemyScript.target = character.transform;
             EnemyLifecycle el = newEnemy.GetComponent<EnemyLifecycle>();
             el.eg = this;
-            print("enemy speed: " + enemySpeed);
             el.speed = enemySpeed;
             Transform childTransform = newEnemy.transform.Find("Enemy");
             SpriteRenderer sr = childTransform.GetComponent<SpriteRenderer>();
