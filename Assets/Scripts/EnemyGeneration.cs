@@ -9,7 +9,7 @@ public class EnemyGeneration : MonoBehaviour
     public GameObject character;
     private Vector3 position;
     private float deltaTime;
-    private readonly float TIME_SPREAD = 600.0f;
+    private readonly float TIME_SPREAD = 300.0f;
     private readonly float RADIUS = 10.0f;
     private readonly float PI = 3.141f;
     public int numEnemies;
@@ -48,6 +48,7 @@ public class EnemyGeneration : MonoBehaviour
             enemyScript.target = character.transform;
             EnemyLifecycle el = newEnemy.GetComponent<EnemyLifecycle>();
             el.eg = this;
+            print("enemy speed: " + enemySpeed);
             el.speed = enemySpeed;
             Transform childTransform = newEnemy.transform.Find("Enemy");
             SpriteRenderer sr = childTransform.GetComponent<SpriteRenderer>();
@@ -57,6 +58,9 @@ public class EnemyGeneration : MonoBehaviour
         wave += 1;
         enemyPerWave += 1;
         enemySpeed += 0.25f;
+        if(enemySpeed >= 4) {
+            enemySpeed = 4;
+        }
         
     }
 }

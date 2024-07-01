@@ -23,7 +23,7 @@ public class CoinBehavior : MonoBehaviour
             Destroy(gameObject);
         }
         deltaTime += Time.fixedDeltaTime;
-        if (deltaTime >= 100) {
+        if (deltaTime >= 200) {
             Destroy(gameObject);
         }
     }
