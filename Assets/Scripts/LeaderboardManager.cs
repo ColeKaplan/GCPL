@@ -7,7 +7,7 @@ using UnityEngine.XR;
 
 public class LeaderboardManager : MonoBehaviour
 {
-    string leaderboardID = "23199";
+    string leaderboardID = "23209";
     public TextMeshProUGUI names;
     public TextMeshProUGUI scores;
     public TextMeshProUGUI name;

@@ -25,13 +25,13 @@ public class EnemyLifecycle : MonoBehaviour
         deltaTime += Time.fixedDeltaTime;
         totalTime += Time.fixedDeltaTime;
 
-        if (deltaTime >= 10f) {
+        if (deltaTime >= .5f) {
             speed -= 0.01f;
             pathScript.maxSpeed = speed;
             deltaTime = 0;
         }
 
-        if (totalTime >= 400f || speed <= .1f) {
+        if (totalTime >= 20f || speed <= .1f) {
             GameObject newCoin = Instantiate(coin, transform.position, Quaternion.identity);
             CoinBehavior coinScript = newCoin.GetComponent<CoinBehavior>();
             coinScript.character = eg.character;

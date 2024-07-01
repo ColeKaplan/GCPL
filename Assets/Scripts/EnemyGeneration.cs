@@ -9,7 +9,7 @@ public class EnemyGeneration : MonoBehaviour
     public GameObject character;
     private Vector3 position;
     private float deltaTime;
-    private readonly float TIME_SPREAD = 300.0f;
+    private readonly float TIME_SPREAD = 15.0f;
     private readonly float RADIUS = 10.0f;
     private readonly float PI = 3.141f;
     public int numEnemies;

@@ -17,8 +17,8 @@ public class GridScanner : MonoBehaviour
         bounds = CalculateBounds(areaCorners);
     }
 
-    void Update() {
-        if (deltaTime >= 10) {
+    void FixedUpdate() {
+        if (deltaTime >= 2.5f) {
             AstarPath.active.UpdateGraphs(bounds);
             deltaTime = 0.0f;
         } else {
