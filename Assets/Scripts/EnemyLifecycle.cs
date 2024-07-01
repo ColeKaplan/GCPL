@@ -16,6 +16,7 @@ public class EnemyLifecycle : MonoBehaviour
         deltaTime = 0;
         totalTime = 0;
         pathScript = gameObject.GetComponent<AIPath>();
+        pathScript.maxSpeed = speed;
     }
 
     
@@ -23,10 +24,10 @@ public class EnemyLifecycle : MonoBehaviour
     {
         deltaTime += Time.fixedDeltaTime;
         totalTime += Time.fixedDeltaTime;
-        if (deltaTime >= 10f) {
-            speed -= 0.01f;
+
+        if (deltaTime >= 500f) {
+            speed -= 0.005f;
             pathScript.maxSpeed = speed;
-            print("speed: " + speed + "   maxSpeed: " + pathScript.maxSpeed);
             deltaTime = 0;
         }
 

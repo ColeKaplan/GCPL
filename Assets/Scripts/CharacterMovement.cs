@@ -69,11 +69,11 @@ public class CharacterMovement : MonoBehaviour
         if(newPosition.y < -19){
             gameObject.transform.position = new Vector2(gameObject.transform.position.x, -19);
         }
-        if(newPosition.x > 19.1f){
-            gameObject.transform.position = new Vector2(19.1f, gameObject.transform.position.y);
+        if(newPosition.x > 17.5f){
+            gameObject.transform.position = new Vector2(17.5f, gameObject.transform.position.y);
         }
-        if(newPosition.x < -20.1f){
-            gameObject.transform.position = new Vector2(-20.1f, gameObject.transform.position.y);
+        if(newPosition.x < -18.5f){
+            gameObject.transform.position = new Vector2(-18.5f, gameObject.transform.position.y);
         }
 
         rigidBody.MovePosition(newPosition);
