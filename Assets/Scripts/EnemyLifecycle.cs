@@ -31,7 +31,7 @@ public class EnemyLifecycle : MonoBehaviour
             deltaTime = 0;
         }
 
-        if (totalTime >= 20f || speed <= .1f) {
+        if (totalTime >= 25f || speed <= .1f) {
             GameObject newCoin = Instantiate(coin, transform.position, Quaternion.identity);
             CoinBehavior coinScript = newCoin.GetComponent<CoinBehavior>();
             coinScript.character = eg.character;

@@ -83,9 +83,12 @@ public class CharacterMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (collision.collider is CircleCollider2D)
+        if (collision.collider.tag == "Enemy")
         {
             SceneManager.LoadScene(2);
+        }
+        else if (collision.collider.tag == "Coin") {
+            Destroy(collision.collider.gameObject);
         }
     }
 }

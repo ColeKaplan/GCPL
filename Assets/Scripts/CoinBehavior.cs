@@ -17,13 +17,8 @@ public class CoinBehavior : MonoBehaviour
     
     void FixedUpdate()
     {
-        float distance = Vector3.Distance(character.transform.position, gameObject.transform.position);
-        if (distance <= 1.5f) {
-            CharacterMovement.score += 1;
-            Destroy(gameObject);
-        }
         deltaTime += Time.fixedDeltaTime;
-        if (deltaTime >= 200) {
+        if (deltaTime >= 10) {
             Destroy(gameObject);
         }
     }

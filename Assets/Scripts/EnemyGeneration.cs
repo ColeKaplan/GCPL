@@ -39,6 +39,7 @@ public class EnemyGeneration : MonoBehaviour
     }
 
     void GenerateEnemyWave() {
+        int waitCount = 0;
         for (int i = 0; i < enemyPerWave; i++) {
             float theta = Random.Range(0f, 2 * PI);
             position = new Vector3(Mathf.Cos(theta) * RADIUS, Mathf.Sin(theta) * RADIUS, 1);
@@ -53,13 +54,31 @@ public class EnemyGeneration : MonoBehaviour
             SpriteRenderer sr = childTransform.GetComponent<SpriteRenderer>();
             sr.sortingLayerName = "Enemy";
             numEnemies += 1;
+
+            waitCount += 1;
+            if (waitCount >= 2) {
+                StartCoroutine(WaitRandomTime());
+            }
         }
         wave += 1;
         enemyPerWave += 1;
-        enemySpeed += 0.25f;
-        if(enemySpeed >= 4) {
-            enemySpeed = 4;
+        if (enemyPerWave > 15) {
+            enemyPerWave = 15;
         }
+        enemySpeed += 0.4f;
+        if(enemySpeed > 7) {
+            enemySpeed = 7;
+        }
+        // TIME_SPREAD -= .5;
+        // if (TIME_SPREAD <= 12.5) {
+        //     TIME_SPREAD = 12.5;
+        // }
         
+    }
+
+    IEnumerator WaitRandomTime()
+    {
+        float waitTime = Random.Range(0f, 2f);
+        yield return new WaitForSeconds(waitTime);
     }
 }
