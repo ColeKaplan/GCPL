@@ -88,6 +88,7 @@ public class CharacterMovement : MonoBehaviour
             SceneManager.LoadScene(2);
         }
         else if (collision.collider.tag == "Coin") {
+            score += 1;
             Destroy(collision.collider.gameObject);
         }
     }

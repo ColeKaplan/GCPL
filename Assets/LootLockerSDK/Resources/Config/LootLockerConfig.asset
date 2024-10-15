@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: LootLockerConfig
   m_EditorClassIdentifier: 
   apiKey: prod_9c58bc1f381144d29b0fcacacf42ba13
-  token: 
-  adminToken: 19eb07a7304c0291ea7d3e2f92645b67dc5e5e23
+  token: 7c32f6868f0b8e52faa5bbcf2d9c2f224cd09510
+  adminToken: 
   refreshToken: 
   domainKey: iocx4uyt
   gameID: 0
   game_version: 1.0.0.0
   sdk_version: 2.2.0
-  deviceID: 
+  deviceID: 82eaffb0-1f2a-4911-b23f-46c95e239cef
   url: https://api.lootlocker.io/v1
   adminUrl: https://iocx4uyt.api.lootlocker.io/admin
   playerUrl: https://iocx4uyt.api.lootlocker.io/player
   userUrl: https://iocx4uyt.api.lootlocker.io/game
   baseUrl: https://iocx4uyt.api.lootlocker.io
   clientSideRequestTimeOut: 180
-  currentDebugLevel: 3
+  currentDebugLevel: 0
   allowTokenRefresh: 1
